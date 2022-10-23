@@ -12,9 +12,12 @@ class _TravelBlogState extends State<TravelBlog> {
   final travel_list = TravelData.listOfTopImages;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: PageView(
-      scrollDirection: Axis.horizontal,
-      children: List.generate(, (index) => null),
-    ),);
+    return Scaffold(
+      body: PageView(
+        scrollDirection: Axis.horizontal,
+        children: ListView.builder(
+            itemCount: travel_list.length, itemBuilder: ((context, index) {})),
+      ),
+    );
   }
 }
